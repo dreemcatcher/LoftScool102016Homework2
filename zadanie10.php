@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: o
- * Date: 30.10.2016
- * Time: 15:31
- */
+error_reporting(-1);
+mb_internal_encoding('utf-8');
+function myFileCreate($fileName, $fileContent){
+    file_put_contents($fileName, $fileContent);
+    $result=file_get_contents($fileName);
+    return $result;
+}
+echo myFileCreate('anothertest.txt', 'Hello again!');
