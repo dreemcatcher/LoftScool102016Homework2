@@ -1,12 +1,14 @@
 <?php
+error_reporting(-1);
+mb_internal_encoding('utf-8');
 
 function  calcEverything()
 {
     $numbers=0;
     $char=func_get_arg(0);
-    echo '<pre>';
-    print_r($char);  // штуковина для тестирования массива.
-    echo '</pre>';
+//    echo '<pre>';
+//    print_r($char);  // штуковина для тестирования массива.
+//    echo '</pre>';
     echo "Получено действие $char .<br>";
     if($char=='+'){
         for ($i=1; $i<func_num_args(); $i++)  // Первый элемент это действие.

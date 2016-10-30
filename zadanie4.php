@@ -1,4 +1,7 @@
 <?php
+error_reporting(-1);
+mb_internal_encoding('utf-8');
+
 Function MyMultiplicationTable($x=10, $y=10)  // На тот случай если просто нужна таблица, тут есть параметры по дефолту
 {
     if((intval($x) === $x && $x > 0) and (intval($y) === $y && $y > 0)) {  // нам вообще число передали?
@@ -31,7 +34,6 @@ Function MyMultiplicationTable($x=10, $y=10)  // На тот случай есл
         echo "Параметры неизвестны";
     }
 }
-
 echo MyMultiplicationTable(4,4)."<br>";
 echo MyMultiplicationTable(5,5)."<br>";
 echo MyMultiplicationTable(6,6)."<br>";
