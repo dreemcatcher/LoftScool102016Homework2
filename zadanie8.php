@@ -4,6 +4,7 @@ mb_internal_encoding('utf-8');
 
 function rxAnalize($text){         // Ищем  смайлик
     $smileRegexp = '/[:][)]/';
+    //тут даже storm ругается на переменную наверное лучше так $smileResult
     $Smileresult = preg_match($smileRegexp, $text, $foundSmile);
     if ($Smileresult==1){
         echo "<pre>";
